@@ -18,7 +18,7 @@ const MapProduct = ({ name, price, amount, image }) => {
                             <button className='btn text-danger' onClick={() => { dispatch(removeItem({ name })) }}>Remove</button>
                         </div>
                         <div className='d-flex flex-column text-center'>
-                            <p>Amount</p>
+                            <p>Quantity</p>
                             <div className='d-flex flex-row align-items-center justify-content-center'>
                                 <button className='btn' 
                                 onClick={() => 

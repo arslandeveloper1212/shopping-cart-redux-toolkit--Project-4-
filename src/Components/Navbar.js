@@ -1,24 +1,27 @@
 import React from 'react'
 import Badge from '@mui/material/Badge';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
+import "./Navbar.css"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const Navbar = () => {
 
-    const item = useSelector((state)=>state.basket.amount)
+  const item = useSelector((state) => state.basket.amount)
   return (
-    <div className='container'>
-    <div className='row mt-2'>
-      <div className='navbar_controls'>
-      <div className='navbar_bg d-flex justify-content-between'>
-      <h4>Home</h4>
-      <div className='shoping-icon'>
-      <Badge badgeContent={item} color="primary">
-      <ShoppingCartIcon />
-    </Badge>
+    <div className='bg_navbar py-2'>
+      <div className='container'>
+        <div className='row text-white'>
+          <div className='navbar_controls'>
+            <div className='navbar_tag py-2 d-flex justify-content-between'>
+              <h4>Home</h4>
+              <div className='shoping-icon'>
+                <Badge badgeContent={item} color="secondary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-    </div>
     </div>
   )
 }
