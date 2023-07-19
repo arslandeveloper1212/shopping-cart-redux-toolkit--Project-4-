@@ -5,7 +5,7 @@ import "./Navbar.css"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const Navbar = () => {
 
-  const item = useSelector((state) => state.basket.amount)
+ 
   return (
     <div className='bg_navbar py-2'>
       <div className='container'>
@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className='navbar_tag py-2 d-flex justify-content-between'>
               <h4>Home</h4>
               <div className='shoping-icon'>
-                <Badge badgeContent={item} color="secondary">
+                <Badge  color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </div>
